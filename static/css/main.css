@@ -1,3 +1,45 @@
+@font-face {
+    font-family: 'Carmela';
+    src: url('carmela.eot');
+    src: url('carmela.eot?#iefix') format('embedded-opentype'),
+         url('carmela.woff') format('woff'),
+         url('carmela.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     direction: rtl;
+    font-family: 'Carmela','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.bg {
+    background: url(../img/bg-nt.jpg);
+    background-repeat: no-repeat;
+}
+
+.content { margin-top: 200px; margin-bottom: 120px;}
+
+#reg-form { margin-top: 70px; }
+
+label {
+    font-family: 'Carmela','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1.4em;
+}
+
+input {
+    border-width: 0;
+    text-align: center;
+    font-family: 'Carmela','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1.3em;
+}
+
+.pink {
+    background-color: #c61476;
+    color: #fff;
+}
+
+.blue {
+    background-color: #02abc7;
+    color: #fff;
 }
