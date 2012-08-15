@@ -18,9 +18,13 @@ body {
     background-repeat: no-repeat;
 }
 
-.content { margin-top: 200px; margin-bottom: 120px;}
+.center { text-align: center; }
+.content { margin-top: 200px; }
+.error-content { margin-bottom: 70px; }
+.footer { margin-bottom: 120px; }
+.footer-text { font-size: 1.2em; }
 
-#reg-form { margin-top: 70px; }
+#reg-form { margin-top: 70px; margin-bottom: 50px; }
 
 label {
     font-family: 'Carmela','Helvetica Neue',Helvetica,Arial,sans-serif;
