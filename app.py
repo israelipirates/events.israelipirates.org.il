@@ -14,10 +14,14 @@ class Registration(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
     email = db.Column(db.String(120), unique=True)
+    org = db.Column(db.String(80))
+    updates = db.Column(db.Boolean())
 
-    def __init__(self, name, email):
+    def __init__(self, name, email, org, updates):
         self.name = name
         self.email = email
+        self.org = org
+        self.updates = updates
 
     def __repr__(self):
         return '<Name %r>' % self.name
@@ -31,12 +35,14 @@ def home():
 @app.route('/reg', methods=['POST'])
 def reg():
     error = False
-    name = request.form['name']
-    email = request.form['email']
+    name = request.form.get('name')
+    email = request.form.get('email')
+    org = request.form.get('org', '')
+    updates = request.form.get('updates') == 'yes'
 
     if name and email:
         try:
-            registration = Registration(name, email)
+            registration = Registration(name, email, org, updates)
             db.session.add(registration)
             db.session.commit()
         except:
