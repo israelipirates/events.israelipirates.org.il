@@ -2,6 +2,7 @@ import os
 
 from flask import Flask
 from flask import render_template
+from flask import request
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -29,7 +30,21 @@ def home():
 
 @app.route('/reg', methods=['POST'])
 def reg():
-    return render_template('thx.html')
+    error = False
+    name = request.form['name']
+    email = request.form['email']
+
+    if name and email:
+        try:
+            registration = Registration(name, email)
+            db.session.add(registration)
+            db.session.commit()
+        except:
+            error = 'dupe'
+    else:
+        error = 'blank'
+
+    return render_template('thx.html', error=error)
 
 
 @app.route('/robots.txt')

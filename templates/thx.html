@@ -24,7 +24,16 @@
       <div class="span5 offset2 content">
         <img src="/static/img/text.png">
         <div class="span4 offset2">
+          {% if error == 'dupe' %}
+          <h1>ארעה שגיאה</h1>
+          <h2>בקשתך לא התקבלה</h2>
+          <span>כתובת אימייל זו משוייכת כבר לבקשת הרשמה</span>
+          {% elif error == 'blank' %}
+          <h1>ארעה שגיאה</h1>
+          <h2>נא למלא את כל השדות</h2>
+          {% else %}
           <h1>בקשתך התקבלה</h1>
+          {% endif %}
         </div>
       </div>
     </div>
