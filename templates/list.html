@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>שם</th>
+      <th>אימייל</th>
+      <th>ארגון</th>
+      <th>עדכונים</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for reg in regs %}
+    <tr>
+      <td>{{ reg.name }}</td>
+      <td>{{ reg.email }}</td>
+      <td>{{ reg.org }}</td>
+      <td>{{ reg.updates }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
