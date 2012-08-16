@@ -4,6 +4,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th></th>
       <th>שם</th>
       <th>אימייל</th>
       <th>ארגון</th>
@@ -13,6 +14,7 @@
   <tbody>
   {% for reg in regs %}
     <tr>
+      <td>{{ loop.index }}.</td>
       <td>{{ reg.name }}</td>
       <td>{{ reg.email }}</td>
       <td>{{ reg.org }}</td>
