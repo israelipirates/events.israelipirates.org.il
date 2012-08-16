@@ -16,7 +16,7 @@
       <td>{{ reg.name }}</td>
       <td>{{ reg.email }}</td>
       <td>{{ reg.org }}</td>
-      <td>{{ reg.updates }}</td>
+      <td>{% if reg.updates %}כן{% else %}לא{% endif %}</td>
     </tr>
   {% endfor %}
   </tbody>
