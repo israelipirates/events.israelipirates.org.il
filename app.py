@@ -6,7 +6,7 @@ from flask import request
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://a:b@c:d/e'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['HEROKU_POSTGRESQL_RED_URL']
 db = SQLAlchemy(app)
 
 
