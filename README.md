@@ -1,4 +1,4 @@
-Israeli Pirate Party Event Regisration Website
+Israeli Pirate Party Event Registration Website
 ==============================================
 
 The event registration website can be found at: http://events.israelipirates.org.il
