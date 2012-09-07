@@ -54,12 +54,6 @@ def reg():
     return render_template('thx.html', error=error)
 
 
-@app.route('/reg/l1st')
-def reg_list():
-    regs = Registration.query.all()
-    return render_template('list.html', regs=regs)
-
-
 @app.route('/robots.txt')
 def robots():
     res = app.make_response('User-agent: *\nAllow: /')
